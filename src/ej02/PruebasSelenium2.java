@@ -22,7 +22,7 @@ class PruebasSelenium2 {
 	}
 
 	@Test
-	void test1() {
+	void test1Valido() {
 		driver1.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		WebElement numEmpBox = driver1.findElement(By.id("numero"));        
         WebElement directivoBox = driver1.findElement(By.id("directivo"));
@@ -40,7 +40,7 @@ class PruebasSelenium2 {
 	}
 
 	@Test
-	void test2() {
+	void test2Valido() {
 		driver1.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		WebElement numero = driver1.findElement(By.id("numero"));        
         WebElement directivo = driver1.findElement(By.id("directivo"));
@@ -58,7 +58,7 @@ class PruebasSelenium2 {
 	}
 	
 	@Test
-	void test3() {
+	void test3Error() {
 		driver1.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		WebElement numero = driver1.findElement(By.id("numero"));        
         WebElement directivo = driver1.findElement(By.id("directivo"));
@@ -80,7 +80,7 @@ class PruebasSelenium2 {
 	}
 	
 	@Test
-	void test4() {
+	void test4Error() {
 		driver1.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		WebElement numero = driver1.findElement(By.id("numero"));        
         WebElement directivo = driver1.findElement(By.id("directivo"));
@@ -102,7 +102,7 @@ class PruebasSelenium2 {
 	}
 	
 	@Test
-	void test5() {
+	void test5Error() {
 		driver1.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		WebElement numero = driver1.findElement(By.id("numero"));        
         WebElement directivo = driver1.findElement(By.id("directivo"));
@@ -124,7 +124,7 @@ class PruebasSelenium2 {
 	}
 	
 	@Test
-	void test6() {
+	void test6Error() {
 		driver1.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		WebElement numero = driver1.findElement(By.id("numero"));        
         WebElement directivo = driver1.findElement(By.id("directivo"));
@@ -146,7 +146,7 @@ class PruebasSelenium2 {
 	}
 	
 	@Test
-	void test7() {
+	void test7Error() {
 		driver1.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		WebElement numero = driver1.findElement(By.id("numero"));        
         WebElement directivo = driver1.findElement(By.id("directivo"));
@@ -168,7 +168,7 @@ class PruebasSelenium2 {
 	}
 	
 	@Test
-	void test8() {
+	void test8Error() {
 		driver1.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		WebElement numero = driver1.findElement(By.id("numero"));        
         WebElement directivo = driver1.findElement(By.id("directivo"));
@@ -190,7 +190,7 @@ class PruebasSelenium2 {
 	}
 	
 	@Test
-	void test9() {
+	void test9Error() {
 		driver1.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		WebElement numero = driver1.findElement(By.id("numero"));        
         WebElement directivo = driver1.findElement(By.id("directivo"));
@@ -212,7 +212,7 @@ class PruebasSelenium2 {
 	}
 	
 	@Test
-	void test10() {
+	void test10Error() {
 		driver1.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		WebElement numero = driver1.findElement(By.id("numero"));        
         WebElement directivo = driver1.findElement(By.id("directivo"));
@@ -234,7 +234,7 @@ class PruebasSelenium2 {
 	}
 	
 	@Test
-	void test11() {
+	void test11Error() {
 		driver1.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		WebElement numero = driver1.findElement(By.id("numero"));        
         WebElement directivo = driver1.findElement(By.id("directivo"));
@@ -256,7 +256,7 @@ class PruebasSelenium2 {
 	}
 	
 	@Test
-	void test12() {
+	void test12Error() {
 		driver1.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		WebElement numero = driver1.findElement(By.id("numero"));        
         WebElement directivo = driver1.findElement(By.id("directivo"));
@@ -278,7 +278,7 @@ class PruebasSelenium2 {
 	}
 	
 	@Test
-	void test13() {
+	void test13Error() {
 		driver1.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		WebElement numero = driver1.findElement(By.id("numero"));        
         WebElement directivo = driver1.findElement(By.id("directivo"));
@@ -300,7 +300,7 @@ class PruebasSelenium2 {
 	}
 	
 	@Test
-	void test14() {
+	void test14Error() {
 		driver1.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		WebElement numero = driver1.findElement(By.id("numero"));        
         WebElement directivo = driver1.findElement(By.id("directivo"));
@@ -322,7 +322,7 @@ class PruebasSelenium2 {
 	}
 	
 	@Test
-	void test15() {
+	void test15Error() {
 		driver1.get("https://elenarivero.github.io/Ejercicio2/index.html");
 		WebElement numero = driver1.findElement(By.id("numero"));        
         WebElement directivo = driver1.findElement(By.id("directivo"));
