@@ -36,7 +36,7 @@ class PruebasSelenium3 {
         
         WebElement valido = driver1.findElement(By.cssSelector("h3"));
         
-        assertEquals(valido.getText(), "Datos correctos");
+        assertEquals("Datos correctos", valido.getText());
 	}
 	
 	@Test
@@ -54,7 +54,7 @@ class PruebasSelenium3 {
         
         WebElement valido = driver1.findElement(By.cssSelector("h3"));
         
-        assertEquals(valido.getText(), "Datos correctos");
+        assertEquals("Datos correctos", valido.getText());
 	}
 	
 	@Test
@@ -72,7 +72,7 @@ class PruebasSelenium3 {
         
         WebElement valido = driver1.findElement(By.cssSelector("h3"));
         
-        assertEquals(valido.getText(), "Datos correctos");
+        assertEquals("Datos correctos", valido.getText());
 	}
 	
 	@Test
@@ -90,7 +90,7 @@ class PruebasSelenium3 {
         
         WebElement valido = driver1.findElement(By.cssSelector("h3"));
         
-        assertEquals(valido.getText(), "Datos correctos");
+        assertEquals("Datos correctos", valido.getText());
 	}
 	
 	@Test
@@ -108,7 +108,7 @@ class PruebasSelenium3 {
         
         WebElement valido = driver1.findElement(By.cssSelector("h3"));
         
-        assertEquals(valido.getText(), "Datos correctos");
+        assertEquals("Datos correctos", valido.getText());
 	}
 
 	@Test
@@ -126,7 +126,7 @@ class PruebasSelenium3 {
         
         WebElement valido = driver1.findElement(By.cssSelector("h3"));
         
-        assertEquals(valido.getText(), "Datos correctos");
+        assertEquals("Datos correctos", valido.getText());
 	}
 	
 	@Test
@@ -144,7 +144,7 @@ class PruebasSelenium3 {
         
         WebElement valido = driver1.findElement(By.cssSelector("h3"));
         
-        assertEquals(valido.getText(), "Datos correctos");
+        assertEquals("Datos correctos", valido.getText());
 	}
 	
 	@Test
@@ -162,7 +162,7 @@ class PruebasSelenium3 {
         
         WebElement valido = driver1.findElement(By.cssSelector("h3"));
         
-        assertEquals(valido.getText(), "Datos correctos");
+        assertEquals("Datos correctos", valido.getText());
 	}
 	
 	@Test
@@ -180,7 +180,205 @@ class PruebasSelenium3 {
         
         WebElement valido = driver1.findElement(By.cssSelector("h3"));
         
-        assertEquals(valido.getText(), "Datos correctos");
+        assertEquals("Datos correctos", valido.getText());
+	}
+	
+	@Test
+	void test10Error() {
+		driver1.get("https://elenarivero.github.io/ejercicio3/index.html");
+		WebElement nomap = driver1.findElement(By.id("nomap"));        
+        WebElement fecha = driver1.findElement(By.id("fecha"));
+        
+        nomap.sendKeys("1Amaro Suarez");
+        fecha.sendKeys("31/12/2004");
+        
+        
+        WebElement submitButton = driver1.findElement(By.xpath("//p/input[@type='submit']"));
+        submitButton.click();
+        
+        WebElement error = driver1.findElement(By.id("errorNomap"));
+        boolean textoError = error.isDisplayed();
+        assertTrue(textoError);
+        
+        WebElement errorFecha = driver1.findElement(By.id("errorFecha"));
+        boolean textoErrorFecha = errorFecha.isDisplayed();
+        assertFalse(textoErrorFecha);
+	}
+	
+	@Test
+	void test11Error() {
+		driver1.get("https://elenarivero.github.io/ejercicio3/index.html");
+		WebElement nomap = driver1.findElement(By.id("nomap"));        
+        WebElement fecha = driver1.findElement(By.id("fecha"));
+        
+        nomap.sendKeys("Amaro _ Suarez");
+        fecha.sendKeys("31/12/2004");
+        
+        
+        WebElement submitButton = driver1.findElement(By.xpath("//p/input[@type='submit']"));
+        submitButton.click();
+        
+        WebElement error = driver1.findElement(By.id("errorNomap"));
+        boolean textoError = error.isDisplayed();
+        assertTrue(textoError);
+        
+        WebElement errorFecha = driver1.findElement(By.id("errorFecha"));
+        boolean textoErrorFecha = errorFecha.isDisplayed();
+        assertFalse(textoErrorFecha);
+	}
+	
+	@Test
+	void test12Error() {
+		driver1.get("https://elenarivero.github.io/ejercicio3/index.html");
+		WebElement nomap = driver1.findElement(By.id("nomap"));        
+        WebElement fecha = driver1.findElement(By.id("fecha"));
+        
+        nomap.sendKeys("");
+        fecha.sendKeys("31/12/2004");
+        
+        
+        WebElement submitButton = driver1.findElement(By.xpath("//p/input[@type='submit']"));
+        submitButton.click();
+        
+        WebElement error = driver1.findElement(By.id("errorNomap"));
+        boolean textoError = error.isDisplayed();
+        assertTrue(textoError);
+        
+        WebElement errorFecha = driver1.findElement(By.id("errorFecha"));
+        boolean textoErrorFecha = errorFecha.isDisplayed();
+        assertFalse(textoErrorFecha);
+	}
+	
+	@Test
+	void test13Error() {
+		driver1.get("https://elenarivero.github.io/ejercicio3/index.html");
+		WebElement nomap = driver1.findElement(By.id("nomap"));        
+        WebElement fecha = driver1.findElement(By.id("fecha"));
+        
+        nomap.sendKeys("Amaro1Suarez");
+        fecha.sendKeys("31/12/2004");
+        
+        
+        WebElement submitButton = driver1.findElement(By.xpath("//p/input[@type='submit']"));
+        submitButton.click();
+        
+        WebElement error = driver1.findElement(By.id("errorNomap"));
+        boolean textoError = error.isDisplayed();
+        assertTrue(textoError);
+        
+        WebElement errorFecha = driver1.findElement(By.id("errorFecha"));
+        boolean textoErrorFecha = errorFecha.isDisplayed();
+        assertFalse(textoErrorFecha);
+	}
+	
+	@Test
+	void test14Error() {
+		driver1.get("https://elenarivero.github.io/ejercicio3/index.html");
+		WebElement nomap = driver1.findElement(By.id("nomap"));        
+        WebElement fecha = driver1.findElement(By.id("fecha"));
+        
+        nomap.sendKeys("Amaro Suarez");
+        fecha.sendKeys("00/12/2004");
+        
+        
+        WebElement submitButton = driver1.findElement(By.xpath("//p/input[@type='submit']"));
+        submitButton.click();
+        
+        WebElement error = driver1.findElement(By.id("errorNomap"));
+        boolean textoError = error.isDisplayed();
+        assertFalse(textoError);
+        
+        WebElement errorFecha = driver1.findElement(By.id("errorFecha"));
+        boolean textoErrorFecha = errorFecha.isDisplayed();
+        assertTrue(textoErrorFecha);
+	}
+	
+	@Test
+	void test15Error() {
+		driver1.get("https://elenarivero.github.io/ejercicio3/index.html");
+		WebElement nomap = driver1.findElement(By.id("nomap"));        
+        WebElement fecha = driver1.findElement(By.id("fecha"));
+        
+        nomap.sendKeys("Amaro Suarez");
+        fecha.sendKeys("32/12/2004");
+        
+        
+        WebElement submitButton = driver1.findElement(By.xpath("//p/input[@type='submit']"));
+        submitButton.click();
+        
+        WebElement error = driver1.findElement(By.id("errorNomap"));
+        boolean textoError = error.isDisplayed();
+        assertFalse(textoError);
+        
+        WebElement errorFecha = driver1.findElement(By.id("errorFecha"));
+        boolean textoErrorFecha = errorFecha.isDisplayed();
+        assertTrue(textoErrorFecha);
+	}
+	
+	@Test
+	void test16Error() {
+		driver1.get("https://elenarivero.github.io/ejercicio3/index.html");
+		WebElement nomap = driver1.findElement(By.id("nomap"));        
+        WebElement fecha = driver1.findElement(By.id("fecha"));
+        
+        nomap.sendKeys("Amaro Suarez");
+        fecha.sendKeys("12/00/2004");
+        
+        
+        WebElement submitButton = driver1.findElement(By.xpath("//p/input[@type='submit']"));
+        submitButton.click();
+        
+        WebElement error = driver1.findElement(By.id("errorNomap"));
+        boolean textoError = error.isDisplayed();
+        assertFalse(textoError);
+        
+        WebElement errorFecha = driver1.findElement(By.id("errorFecha"));
+        boolean textoErrorFecha = errorFecha.isDisplayed();
+        assertTrue(textoErrorFecha);
+	}
+	
+	@Test
+	void test17Error() {
+		driver1.get("https://elenarivero.github.io/ejercicio3/index.html");
+		WebElement nomap = driver1.findElement(By.id("nomap"));        
+        WebElement fecha = driver1.findElement(By.id("fecha"));
+        
+        nomap.sendKeys("Amaro Suarez");
+        fecha.sendKeys("12/13/2004");
+        
+        
+        WebElement submitButton = driver1.findElement(By.xpath("//p/input[@type='submit']"));
+        submitButton.click();
+        
+        WebElement error = driver1.findElement(By.id("errorNomap"));
+        boolean textoError = error.isDisplayed();
+        assertFalse(textoError);
+        
+        WebElement errorFecha = driver1.findElement(By.id("errorFecha"));
+        boolean textoErrorFecha = errorFecha.isDisplayed();
+        assertTrue(textoErrorFecha);
+	}
+	
+	@Test
+	void test18Error() {
+		driver1.get("https://elenarivero.github.io/ejercicio3/index.html");
+		WebElement nomap = driver1.findElement(By.id("nomap"));        
+        WebElement fecha = driver1.findElement(By.id("fecha"));
+        
+        nomap.sendKeys("Amaro Suarez");
+        fecha.sendKeys("12/12/20004");
+        
+        
+        WebElement submitButton = driver1.findElement(By.xpath("//p/input[@type='submit']"));
+        submitButton.click();
+        
+        WebElement error = driver1.findElement(By.id("errorNomap"));
+        boolean textoError = error.isDisplayed();
+        assertFalse(textoError);
+        
+        WebElement errorFecha = driver1.findElement(By.id("errorFecha"));
+        boolean textoErrorFecha = errorFecha.isDisplayed();
+        assertTrue(textoErrorFecha);
 	}
 	
 	/*
